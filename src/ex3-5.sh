@@ -1,4 +1,12 @@
 #!/bin/bash
+show_files() {
+    ls "$@"
+}
+
+if [ "$#" -gt 0 ]; then
+    show_files "$@"
+    exit $?
+fi
 
 echo "==================="
 echo "1) 사용자 정보"
